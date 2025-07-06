@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to View Math Star Website</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1, h2 {
+            color: #3498db;
+        }
+        code {
+            background-color: #f5f5f5;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-family: monospace;
+        }
+        pre {
+            background-color: #f5f5f5;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        .note {
+            background-color: #fef9e7;
+            border-left: 4px solid #f1c40f;
+            padding: 15px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>How to View the Math Star Website</h1>
+    
+    <p>You have successfully created the Math Star website files. To view the website, you need to set up a local web server. Here are several options:</p>
+    
+    <h2>Option 1: Install Node.js</h2>
+    <ol>
+        <li>Download and install Node.js from <a href="https://nodejs.org/" target="_blank">https://nodejs.org/</a></li>
+        <li>Open Terminal and navigate to the website directory:
+            <pre>cd ~/math-star-website</pre>
+        </li>
+        <li>Run the included server:
+            <pre>node server.js</pre>
+        </li>
+        <li>Open your web browser and go to: <a href="http://localhost:3000">http://localhost:3000</a></li>
+    </ol>
+    
+    <h2>Option 2: Install Python</h2>
+    <ol>
+        <li>Download and install Python from <a href="https://www.python.org/downloads/" target="_blank">https://www.python.org/downloads/</a></li>
+        <li>Open Terminal and navigate to the website directory:
+            <pre>cd ~/math-star-website</pre>
+        </li>
+        <li>Run Python's built-in HTTP server:
+            <pre>python3 -m http.server 3000</pre>
+            or for Python 2:
+            <pre>python -m SimpleHTTPServer 3000</pre>
+        </li>
+        <li>Open your web browser and go to: <a href="http://localhost:3000">http://localhost:3000</a></li>
+    </ol>
+    
+    <h2>Option 3: Use a Code Editor with Live Server</h2>
+    <ol>
+        <li>Install Visual Studio Code from <a href="https://code.visualstudio.com/" target="_blank">https://code.visualstudio.com/</a></li>
+        <li>Install the "Live Server" extension in VS Code</li>
+        <li>Open the math-star-website folder in VS Code</li>
+        <li>Right-click on index.html and select "Open with Live Server"</li>
+    </ol>
+    
+    <h2>Option 4: Open Directly in Browser</h2>
+    <p>You can simply open the index.html file directly in your web browser:</p>
+    <ol>
+        <li>Open Finder</li>
+        <li>Navigate to your home directory and then to the math-star-website folder</li>
+        <li>Double-click on index.html to open it in your default web browser</li>
+    </ol>
+    
+    <div class="note">
+        <strong>Note:</strong> When opening the website directly in a browser without a server, some features like form submission simulation might not work correctly due to browser security restrictions.
+    </div>
+    
+    <h2>Next Steps</h2>
+    <p>Once you've verified that the website looks good locally, you can consider:</p>
+    <ul>
+        <li>Adding real images to the images folder</li>
+        <li>Customizing the content to better match your specific tutoring offerings</li>
+        <li>Setting up hosting with a service like GitHub Pages, Netlify, or a traditional web host</li>
+        <li>Registering your domain name (math-star.org)</li>
+    </ul>
+</body>
+</html>
