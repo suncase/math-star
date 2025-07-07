@@ -5,10 +5,22 @@
     box-sizing: border-box;
 }
 
+:root {
+    --primary-color: #1a5fb4;     /* Deep blue - primary brand color */
+    --secondary-color: #f9ca24;   /* Bright yellow - accent color */
+    --tertiary-color: #3498db;    /* Light blue - supporting color */
+    --dark-color: #2c3e50;        /* Dark blue-gray - text and headings */
+    --light-color: #f0f8ff;       /* Very light blue - backgrounds */
+    --text-color: #333333;        /* Dark gray - body text */
+    --success-color: #2ecc71;     /* Green - success messages */
+    --warning-color: #e67e22;     /* Orange - warnings */
+}
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
-    color: #333;
+    color: var(--text-color);
+    background-color: var(--light-color);
 }
 
 .container {
@@ -17,14 +29,33 @@ body {
     padding: 0 20px;
 }
 
-h1, h2, h3 {
+h1, h3 {
     margin-bottom: 20px;
-    color: #2c3e50;
+    color: var(--dark-color);
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: var(--dark-color);
+    position: relative;
+    padding-bottom: 15px;
+}
+
+h2:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+    border-radius: 2px;
 }
 
 a {
     text-decoration: none;
-    color: #3498db;
+    color: var(--tertiary-color);
 }
 
 ul {
@@ -37,7 +68,7 @@ section {
 
 .btn {
     display: inline-block;
-    background-color: #3498db;
+    background-color: var(--primary-color);
     color: white;
     padding: 12px 24px;
     border-radius: 5px;
@@ -46,7 +77,7 @@ section {
 }
 
 .btn:hover {
-    background-color: #2980b9;
+    background-color: var(--tertiary-color);
 }
 
 /* Header */
@@ -68,7 +99,7 @@ header .container {
 .logo h1 {
     font-size: 24px;
     margin-bottom: 0;
-    color: #3498db;
+    color: var(--primary-color);
     display: flex;
     align-items: center;
 }
@@ -89,18 +120,18 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #2c3e50;
+    color: var(--dark-color);
     font-weight: 600;
     transition: color 0.3s;
 }
 
 nav ul li a:hover {
-    color: #3498db;
+    color: var(--primary-color);
 }
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(rgba(52, 152, 219, 0.8), rgba(41, 128, 185, 0.8)), url('../images/math-background.jpg');
+    background: linear-gradient(rgba(26, 95, 180, 0.8), rgba(52, 152, 219, 0.8)), url('../images/math-background.jpg');
     background-size: cover;
     background-position: center;
     color: white;
@@ -124,7 +155,7 @@ nav ul li a:hover {
 
 /* About Section */
 .about {
-    background-color: #f9f9f9;
+    background-color: var(--light-color);
     text-align: center;
 }
 
@@ -155,6 +186,7 @@ nav ul li a:hover {
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s;
+    border-bottom: 4px solid var(--primary-color);
 }
 
 .feature:hover {
@@ -163,8 +195,75 @@ nav ul li a:hover {
 
 .feature i {
     font-size: 40px;
-    color: #3498db;
+    color: var(--primary-color);
     margin-bottom: 20px;
+}
+
+/* Why Us Section */
+.why-us {
+    background-color: white;
+    text-align: center;
+}
+
+.why-us-content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.why-us-text {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 18px;
+}
+
+.why-us-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 30px;
+}
+
+.why-us-item {
+    display: flex;
+    background-color: var(--light-color);
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-left: 4px solid var(--secondary-color);
+}
+
+.why-us-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.why-us-icon {
+    margin-right: 20px;
+    min-width: 50px;
+    height: 50px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.why-us-icon i {
+    font-size: 24px;
+    color: white;
+}
+
+.why-us-info h3 {
+    margin-bottom: 10px;
+    color: var(--primary-color);
+    font-size: 20px;
+}
+
+.why-us-info p {
+    color: var(--text-color);
+    line-height: 1.6;
 }
 
 /* Courses Section */
@@ -185,13 +284,14 @@ nav ul li a:hover {
     min-width: 250px;
     max-width: 350px;
     padding: 30px;
-    background-color: #f9f9f9;
+    background-color: white;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-top: 4px solid var(--secondary-color);
 }
 
 .grade-group h3 {
-    color: #3498db;
+    color: var(--primary-color);
     margin-bottom: 20px;
 }
 
@@ -204,14 +304,14 @@ nav ul li a:hover {
 
 .grade-group ul li:before {
     content: "✓";
-    color: #2ecc71;
+    color: var(--success-color);
     position: absolute;
     left: 0;
 }
 
 /* Testimonials Section */
 .testimonials {
-    background-color: #f9f9f9;
+    background-color: var(--light-color);
     text-align: center;
 }
 
@@ -241,8 +341,8 @@ nav ul li a:hover {
 .quote:before {
     content: """;
     font-size: 60px;
-    color: #3498db;
-    opacity: 0.2;
+    color: var(--secondary-color);
+    opacity: 0.5;
     position: absolute;
     top: -20px;
     left: -10px;
@@ -302,8 +402,9 @@ nav ul li a:hover {
     max-width: 400px;
     text-align: left;
     padding: 30px;
-    background-color: #f9f9f9;
+    background-color: white;
     border-radius: 10px;
+    border-left: 4px solid var(--secondary-color);
 }
 
 .contact-info p {
@@ -312,7 +413,7 @@ nav ul li a:hover {
 
 .contact-info i {
     margin-right: 10px;
-    color: #3498db;
+    color: var(--primary-color);
 }
 
 .social-links {
@@ -323,7 +424,7 @@ nav ul li a:hover {
     display: inline-block;
     margin-right: 15px;
     font-size: 24px;
-    color: #3498db;
+    color: var(--primary-color);
     transition: transform 0.3s;
 }
 
@@ -333,47 +434,19 @@ nav ul li a:hover {
 
 /* Footer */
 footer {
-    background-color: #2c3e50;
+    background-color: var(--dark-color);
     color: white;
     padding: 30px 0;
     text-align: center;
 }
 
 footer a {
-    color: #3498db;
+    color: var(--tertiary-color);
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    header .container {
-        flex-direction: column;
-    }
-    
-    nav ul {
-        margin-top: 20px;
-    }
-    
-    .hero-content h2 {
-        font-size: 36px;
-    }
-    
-    .about-features,
-    .grade-levels,
-    .testimonial-grid,
-    .contact-content {
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .feature,
-    .grade-group,
-    .testimonial {
-        width: 100%;
-    }
-}
 /* Schedule Section */
 .schedule {
-    background-color: #f9f9f9;
+    background-color: var(--light-color);
     text-align: center;
 }
 
@@ -411,13 +484,13 @@ footer a {
     background: none;
     border: none;
     font-size: 18px;
-    color: #3498db;
+    color: var(--primary-color);
     cursor: pointer;
     padding: 5px 10px;
 }
 
 .month-nav:hover {
-    color: #2980b9;
+    color: var(--tertiary-color);
 }
 
 .weekdays {
@@ -447,16 +520,16 @@ footer a {
 }
 
 .days div:hover:not(.empty, .disabled) {
-    background-color: #e0f7fa;
+    background-color: var(--light-color);
 }
 
 .days .today {
-    background-color: #e3f2fd;
+    background-color: var(--light-color);
     font-weight: bold;
 }
 
 .days .selected {
-    background-color: #3498db;
+    background-color: var(--primary-color);
     color: white;
     font-weight: bold;
 }
@@ -497,14 +570,14 @@ footer a {
 }
 
 .time-slot:hover:not(.disabled) {
-    background-color: #e0f7fa;
-    border-color: #3498db;
+    background-color: var(--light-color);
+    border-color: var(--primary-color);
 }
 
 .time-slot.selected {
-    background-color: #3498db;
+    background-color: var(--primary-color);
     color: white;
-    border-color: #3498db;
+    border-color: var(--primary-color);
 }
 
 .time-slot.disabled {
@@ -542,8 +615,42 @@ footer a {
     cursor: not-allowed;
 }
 
-/* Responsive design for calendar */
+/* Responsive Design */
 @media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+    }
+    
+    nav ul {
+        margin-top: 20px;
+    }
+    
+    .hero-content h2 {
+        font-size: 36px;
+    }
+    
+    .about-features,
+    .grade-levels,
+    .testimonial-grid,
+    .contact-content {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .feature,
+    .grade-group,
+    .testimonial {
+        width: 100%;
+    }
+    
+    .why-us-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .why-us-item {
+        padding: 20px;
+    }
+    
     .calendar-container {
         flex-direction: column;
         align-items: center;
@@ -553,4 +660,14 @@ footer a {
     .time-slots {
         width: 100%;
     }
+}
+.contact-info a {
+    color: var(--primary-color);
+    transition: color 0.3s;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    color: var(--secondary-color);
+    text-decoration: underline;
 }
