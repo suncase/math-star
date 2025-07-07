@@ -69,10 +69,15 @@ header .container {
     font-size: 24px;
     margin-bottom: 0;
     color: #3498db;
+    display: flex;
+    align-items: center;
 }
 
-.logo i {
-    color: #f1c40f;
+.logo-image {
+    height: 40px;
+    width: auto;
+    margin-right: 10px;
+    border-radius: 50%;
 }
 
 nav ul {
