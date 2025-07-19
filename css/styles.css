@@ -21,6 +21,7 @@ body {
     line-height: 1.6;
     color: var(--text-color);
     background-color: var(--light-color);
+    padding-top: 36px; /* Height of the top ribbon */
 }
 
 .container {
@@ -85,8 +86,8 @@ header {
     background-color: white;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     position: sticky;
-    top: 0;
-    z-index: 100;
+    top: 36px; /* Height of the top ribbon */
+    z-index: 99;
 }
 
 header .container {
@@ -670,4 +671,411 @@ footer a {
 .contact-info a:hover {
     color: var(--secondary-color);
     text-decoration: underline;
+}
+/* Top Ribbon with Contact Information */
+.top-ribbon {
+    background-color: var(--dark-color);
+    color: white;
+    padding: 8px 0;
+    font-size: 14px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.contact-ribbon {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.contact-ribbon span {
+    margin-right: 15px;
+    margin-bottom: 5px;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+}
+
+.contact-ribbon i {
+    margin-right: 5px;
+    color: var(--secondary-color);
+}
+
+.contact-ribbon a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.contact-ribbon a:hover {
+    color: var(--secondary-color);
+    text-decoration: underline;
+}
+
+.contact-image {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.contact-logo {
+    width: 120px;
+    height: auto;
+    border-radius: 50%;
+}
+
+@media (max-width: 768px) {
+    .contact-ribbon {
+        flex-direction: column;
+        align-items: center;
+        padding: 5px 0;
+    }
+    
+    .contact-ribbon span {
+        margin-bottom: 5px;
+        font-size: 12px;
+    }
+    
+    body {
+        padding-top: 110px; /* Increased padding for mobile to accommodate the taller ribbon */
+    }
+    
+    header {
+        top: 110px; /* Adjusted top position for mobile */
+    }
+}
+/* Free Assessment Section */
+.free-assessment {
+    background-color: var(--light-color);
+    text-align: center;
+    padding: 80px 0;
+}
+
+.section-intro {
+    max-width: 800px;
+    margin: 0 auto 40px;
+}
+
+.assessment-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 40px;
+}
+
+.assessment-form-container {
+    flex: 1;
+    min-width: 300px;
+    max-width: 600px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    border-top: 4px solid var(--secondary-color);
+}
+
+.assessment-form {
+    text-align: left;
+}
+
+.assessment-form .form-group {
+    margin-bottom: 20px;
+}
+
+.assessment-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: var(--dark-color);
+}
+
+.assessment-form input,
+.assessment-form select,
+.assessment-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+.assessment-form input:focus,
+.assessment-form select:focus,
+.assessment-form textarea:focus {
+    border-color: var(--primary-color);
+    outline: none;
+}
+
+.assessment-form button {
+    margin-top: 10px;
+    width: 100%;
+}
+
+.contact-info {
+    flex: 1;
+    min-width: 300px;
+    max-width: 400px;
+    text-align: left;
+    padding: 30px;
+    background-color: white;
+    border-radius: 10px;
+    border-left: 4px solid var(--secondary-color);
+}
+
+.contact-info h3 {
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    margin-bottom: 15px;
+}
+
+.contact-image {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.contact-logo {
+    width: 120px;
+    height: auto;
+    border-radius: 50%;
+}
+
+@media (max-width: 768px) {
+    .assessment-form-container,
+    .contact-info {
+        width: 100%;
+    }
+    
+    .assessment-content {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+/* Enhanced Mobile Responsiveness */
+@media (max-width: 768px) {
+    /* General adjustments */
+    h1 {
+        font-size: 24px;
+    }
+    
+    h2 {
+        font-size: 28px;
+    }
+    
+    h3 {
+        font-size: 20px;
+    }
+    
+    p {
+        font-size: 16px;
+    }
+    
+    section {
+        padding: 50px 0;
+    }
+    
+    /* Top ribbon adjustments */
+    .top-ribbon {
+        font-size: 12px;
+    }
+    
+    .contact-ribbon span {
+        margin-bottom: 4px;
+    }
+    
+    /* Header adjustments */
+    header .container {
+        padding: 15px;
+    }
+    
+    .logo h1 {
+        font-size: 22px;
+    }
+    
+    .logo-image {
+        height: 30px;
+    }
+    
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    nav ul li {
+        margin: 5px 10px;
+    }
+    
+    /* Hero section adjustments */
+    .hero {
+        padding: 80px 0;
+    }
+    
+    .hero-content h2 {
+        font-size: 32px;
+    }
+    
+    .hero-content p {
+        font-size: 18px;
+    }
+    
+    .btn {
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+    
+    /* Why us section adjustments */
+    .why-us-item {
+        padding: 20px;
+    }
+    
+    .why-us-icon {
+        min-width: 40px;
+        height: 40px;
+    }
+    
+    .why-us-icon i {
+        font-size: 20px;
+    }
+    
+    .why-us-info h3 {
+        font-size: 18px;
+    }
+    
+    /* Assessment form adjustments */
+    .assessment-form-container {
+        padding: 20px;
+    }
+    
+    .assessment-form label {
+        font-size: 16px;
+    }
+    
+    .assessment-form input,
+    .assessment-form select,
+    .assessment-form textarea {
+        padding: 10px;
+        font-size: 15px;
+    }
+    
+    .contact-info {
+        padding: 20px;
+    }
+}
+
+/* Small mobile devices */
+@media (max-width: 480px) {
+    body {
+        padding-top: 140px; /* Even more padding for smaller devices */
+    }
+    
+    header {
+        top: 140px;
+    }
+    
+    .hero {
+        padding: 60px 0;
+    }
+    
+    .hero-content h2 {
+        font-size: 28px;
+    }
+    
+    .hero-content p {
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+    
+    .btn {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+    
+    section {
+        padding: 40px 0;
+    }
+    
+    .feature, 
+    .grade-group, 
+    .testimonial,
+    .assessment-form-container,
+    .contact-info {
+        padding: 15px;
+    }
+    
+    .section-intro {
+        margin-bottom: 20px;
+    }
+    
+    .assessment-content {
+        gap: 30px;
+    }
+}
+/* Mobile Navigation */
+.mobile-menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--primary-color);
+    font-size: 24px;
+    cursor: pointer;
+    padding: 5px;
+}
+
+@media (max-width: 768px) {
+    .mobile-menu-toggle {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+    
+    nav {
+        width: 100%;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+    }
+    
+    nav.mobile-nav-open {
+        max-height: 300px;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+    
+    nav ul li {
+        margin: 0;
+        width: 100%;
+        text-align: center;
+    }
+    
+    nav ul li a {
+        display: block;
+        padding: 12px 0;
+        border-bottom: 1px solid #eee;
+    }
+    
+    header .container {
+        position: relative;
+        padding-bottom: 0;
+    }
+    
+    .logo {
+        padding-right: 50px; /* Make room for the menu toggle */
+    }
 }

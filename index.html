@@ -8,6 +8,17 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
+    <div class="top-ribbon">
+        <div class="container">
+            <div class="contact-ribbon">
+                <span><i class="fas fa-map-marker-alt"></i> <a href="https://maps.google.com/?q=1925+228th+Pl+SE,+Sammamish,+WA+98075" target="_blank">1925 228th Pl SE, Sammamish, WA 98075</a></span>
+                <span><i class="fas fa-envelope"></i> <a href="mailto:admin@math-star.org">admin@math-star.org</a></span>
+                <span><i class="fas fa-phone"></i> <a href="tel:+12069926145">+1-206-992-6145</a></span>
+                <span><i class="fas fa-clock"></i> Mon-Fri: 3PM-8PM | Sat: 9AM-2PM</span>
+                <span><i class="fab fa-facebook"></i> <a href="https://www.facebook.com/profile.php?id=61577394489798" target="_blank">Facebook</a></span>
+            </div>
+        </div>
+    </div>
     <header>
         <div class="container">
             <div class="logo">
@@ -20,8 +31,7 @@
                     <li><a href="#why-us">Why Us</a></li>
                     <li><a href="#courses">Our Courses</a></li>
                     <li><a href="#testimonials">Testimonials</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <li><a href="#schedule">Schedule</a></li>
+                    <li><a href="#free-assessment">Free Assessment</a></li>
                 </ul>
             </nav>
         </div>
@@ -32,7 +42,7 @@
             <div class="hero-content">
                 <h2>Unlock Your Child's Math Potential</h2>
                 <p>Expert math tutoring for grades 1-10 that builds confidence and skills</p>
-                <a href="#schedule" class="btn">Schedule a Free Assessment</a>
+                <a href="#free-assessment" class="btn">Request a Free Assessment</a>
             </div>
         </div>
     </section>
@@ -197,23 +207,25 @@
         </div>
     </section>
 
-    <section id="contact" class="contact">
+    <section id="free-assessment" class="free-assessment">
         <div class="container">
-            <h2>Get Started Today</h2>
-            <div class="contact-content">
-                <div class="contact-form">
-                    <form id="inquiry-form">
+            <h2>Request Your Free Assessment</h2>
+            <p class="section-intro">Fill out the form below to request a free assessment. Our team will contact you within 24 hours to schedule a time that works for you.</p>
+            
+            <div class="assessment-content">
+                <div class="assessment-form-container">
+                    <form id="assessment-form" class="assessment-form">
                         <div class="form-group">
-                            <label for="parent-name">Parent/Guardian Name</label>
-                            <input type="text" id="parent-name" name="parent-name" required>
+                            <label for="parent-name-assessment">Parent/Guardian Name</label>
+                            <input type="text" id="parent-name-assessment" name="parent-name" required>
                         </div>
                         <div class="form-group">
-                            <label for="student-name">Student Name</label>
-                            <input type="text" id="student-name" name="student-name" required>
+                            <label for="student-name-assessment">Student Name</label>
+                            <input type="text" id="student-name-assessment" name="student-name" required>
                         </div>
                         <div class="form-group">
-                            <label for="grade">Grade Level</label>
-                            <select id="grade" name="grade" required>
+                            <label for="grade-assessment">Grade Level</label>
+                            <select id="grade-assessment" name="grade" required>
                                 <option value="">Select Grade</option>
                                 <option value="1">Grade 1</option>
                                 <option value="2">Grade 2</option>
@@ -228,74 +240,33 @@
                             </select>
                         </div>
                         <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" required>
+                            <label for="email-assessment">Email</label>
+                            <input type="email" id="email-assessment" name="email" required>
                         </div>
                         <div class="form-group">
-                            <label for="phone">Phone</label>
-                            <input type="tel" id="phone" name="phone" required>
+                            <label for="phone-assessment">Phone</label>
+                            <input type="tel" id="phone-assessment" name="phone" required>
                         </div>
                         <div class="form-group">
-                            <label for="message">Areas of Focus/Questions</label>
-                            <textarea id="message" name="message" rows="4"></textarea>
+                            <label for="preferred-days">Preferred Days (Optional)</label>
+                            <input type="text" id="preferred-days" name="preferred-days" placeholder="e.g., Weekday evenings, Saturday mornings">
+                        </div>
+                        <div class="form-group">
+                            <label for="message-assessment">Additional Information</label>
+                            <textarea id="message-assessment" name="message" rows="4" placeholder="Tell us about your child's math needs or any specific areas of concern"></textarea>
                         </div>
                         <button type="submit" class="btn">Request Free Assessment</button>
                     </form>
                 </div>
                 <div class="contact-info">
-                    <h3>Contact Information</h3>
-                    <p><i class="fas fa-map-marker-alt"></i> <a href="https://maps.google.com/?q=1925+228th+Pl+SE,+Sammamish,+WA+98075" target="_blank">1925 228th Pl SE, Sammamish, WA 98075</a></p>
-                    <p><i class="fas fa-envelope"></i> <a href="mailto:admin@math-star.org">admin@math-star.org</a></p>
-                    <p><i class="fas fa-phone"></i> <a href="tel:+12069926145">+1-206-992-6145</a></p>
-                    <p><i class="fas fa-clock"></i> Monday-Friday: 3PM-8PM<br>Saturday: 9AM-2PM</p>
-                    <p><i class="fab fa-facebook"></i> <a href="https://www.facebook.com/profile.php?id=61577394489798" target="_blank">Visit our Facebook Page</a></p>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <section id="schedule" class="schedule">
-        <div class="container">
-            <h2>Schedule Your Free Assessment</h2>
-            <p class="section-intro">Select a date and time that works for you, and our tutors will conduct a comprehensive assessment of your child's math skills.</p>
-            
-            <div class="calendar-container">
-                <div class="calendar-wrapper">
-                    <div class="calendar-header">
-                        <button id="prev-month" class="month-nav"><i class="fas fa-chevron-left"></i></button>
-                        <h3 id="current-month">July 2025</h3>
-                        <button id="next-month" class="month-nav"><i class="fas fa-chevron-right"></i></button>
-                    </div>
-                    <div class="weekdays">
-                        <div>Sun</div>
-                        <div>Mon</div>
-                        <div>Tue</div>
-                        <div>Wed</div>
-                        <div>Thu</div>
-                        <div>Fri</div>
-                        <div>Sat</div>
-                    </div>
-                    <div id="calendar-days" class="days">
-                        <!-- Calendar days will be generated by JavaScript -->
+                    <h3>Why Get an Assessment?</h3>
+                    <p>Our free assessment helps us understand your child's current math skills, strengths, and areas for improvement.</p>
+                    <p>Based on the assessment results, we'll create a personalized learning plan tailored to your child's specific needs.</p>
+                    <p>The assessment takes approximately 45 minutes and can be conducted in-person or online.</p>
+                    <div class="contact-image">
+                        <img src="images/MathStar.jpg" alt="Math Star Logo" class="contact-logo">
                     </div>
                 </div>
-                
-                <div class="time-slots">
-                    <h3>Available Times on <span id="selected-date">Select a date</span></h3>
-                    <div id="available-times" class="time-slot-container">
-                        <!-- Time slots will be generated by JavaScript -->
-                        <p class="no-date-selected">Please select a date on the calendar to see available times.</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div id="booking-confirmation" class="booking-confirmation">
-                <h3>Confirm Your Appointment</h3>
-                <div class="confirmation-details">
-                    <p><strong>Date:</strong> <span id="confirm-date">Not selected</span></p>
-                    <p><strong>Time:</strong> <span id="confirm-time">Not selected</span></p>
-                </div>
-                <button id="confirm-booking" class="btn" disabled>Confirm Booking</button>
             </div>
         </div>
     </section>
@@ -303,7 +274,6 @@
     <footer>
         <div class="container">
             <p>&copy; 2025 Math Star. All rights reserved.</p>
-            <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
         </div>
     </footer>
 
