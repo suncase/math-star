@@ -716,6 +716,9 @@ footer a {
     width: 100%;
     z-index: 1000;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    height: auto;
+    max-height: 40px;
+    overflow: hidden;
 }
 
 .contact-ribbon {
@@ -724,10 +727,14 @@ footer a {
     justify-content: center;
     align-items: center;
     gap: 15px;
+    line-height: 1.2;
 }
 
 .contact-ribbon span {
     margin-right: 15px;
+    display: flex;
+    align-items: center;
+}
     margin-bottom: 5px;
     white-space: nowrap;
     display: flex;
@@ -1321,11 +1328,14 @@ footer a {
 }
 /* Social Media Icon Styling */
 .whatsapp-icon, .facebook-icon {
-    width: 16px;
-    height: 16px;
+    width: 16px !important;
+    height: 16px !important;
     vertical-align: middle;
     margin-right: 4px;
     margin-top: -3px;
+    max-width: 16px !important;
+    max-height: 16px !important;
+    object-fit: contain;
 }
 
 .whatsapp-link, .facebook-link {
