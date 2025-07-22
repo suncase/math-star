@@ -304,12 +304,6 @@ nav ul li a:hover {
     left: 0;
 }
 
-.math-symbol {
-    position: absolute;
-    font-size: 60px;
-    color: rgba(26, 95, 180, 0.1);
-    font-family: 'Times New Roman', serif;
-}
 
 /* Testimonials Section */
 .testimonials {
