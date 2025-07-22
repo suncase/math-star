@@ -726,14 +726,15 @@ footer a {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 15px;
+    gap: 10px;
     line-height: 1.2;
 }
 
 .contact-ribbon span {
-    margin-right: 15px;
+    margin-right: 10px;
     display: flex;
     align-items: center;
+    white-space: nowrap;
 }
     margin-bottom: 5px;
     white-space: nowrap;
@@ -770,24 +771,32 @@ footer a {
 }
 
 @media (max-width: 768px) {
-    .contact-ribbon {
-        flex-direction: column;
-        align-items: center;
+    .top-ribbon {
+        max-height: none;
+        height: auto;
         padding: 5px 0;
     }
     
+    .contact-ribbon {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 5px;
+    }
+    
     .contact-ribbon span {
-        margin-bottom: 5px;
+        margin: 2px 5px;
         font-size: 12px;
     }
     
     body {
-        padding-top: 110px; /* Increased padding for mobile to accommodate the taller ribbon */
+        padding-top: 60px; /* Adjusted padding for mobile */
     }
     
     header {
-        top: 110px; /* Adjusted top position for mobile */
+        top: 60px; /* Adjusted top position for mobile */
     }
+}
 }
 /* Free Assessment Section */
 .free-assessment {
@@ -1014,12 +1023,36 @@ footer a {
 
 /* Small mobile devices */
 @media (max-width: 480px) {
+    .top-ribbon {
+        padding: 3px 0;
+    }
+    
+    .contact-ribbon {
+        justify-content: flex-start;
+        overflow-x: auto;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+        padding: 0 5px;
+    }
+    
+    .contact-ribbon span {
+        font-size: 11px;
+        margin: 2px 3px;
+    }
+    
+    .contact-ribbon span a {
+        max-width: 120px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+    
     body {
-        padding-top: 140px; /* Even more padding for smaller devices */
+        padding-top: 50px;
     }
     
     header {
-        top: 140px;
+        top: 50px;
     }
     
     .hero {
@@ -1028,6 +1061,8 @@ footer a {
     
     .hero-content h2 {
         font-size: 28px;
+    }
+}
     }
     
     .hero-content p {
