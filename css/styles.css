@@ -1398,7 +1398,6 @@ footer a {
     color: #FFF;
     border-radius: 50px;
     text-align: center;
-    font-size: 30px;
     box-shadow: 2px 2px 3px #999;
     z-index: 100;
     display: flex;
@@ -1407,9 +1406,8 @@ footer a {
     transition: all 0.3s;
 }
 
-.whatsapp-float img {
-    width: 40px;
-    height: 40px;
+.whatsapp-float i {
+    font-size: 30px;
 }
 
 .whatsapp-float:hover {
@@ -1423,11 +1421,9 @@ footer a {
         height: 50px;
         bottom: 15px;
         right: 15px;
-        font-size: 22px;
     }
     
-    .whatsapp-float img {
-        width: 35px;
-        height: 35px;
+    .whatsapp-float i {
+        font-size: 25px;
     }
 }
