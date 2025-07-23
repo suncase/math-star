@@ -561,3 +561,128 @@ footer {
         display: flex !important;
     }
 }
+/* Promotional Banner */
+.promo-banner {
+    background: linear-gradient(45deg, var(--primary-color), var(--tertiary-color));
+    color: white;
+    text-align: center;
+    padding: 15px 20px;
+    position: relative;
+    z-index: 1000;
+    animation: 
+        glow 2s infinite alternate,
+        slideDown 0.5s ease-out,
+        backgroundShift 5s infinite;
+}
+
+.promo-banner p {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 500;
+    animation: pulse 2s infinite;
+}
+
+.promo-banner strong {
+    color: var(--secondary-color);
+    animation: highlight 1.5s infinite;
+    padding: 0 5px;
+}
+
+.promo-banner .btn-light {
+    display: inline-block;
+    background-color: white;
+    color: var(--primary-color);
+    padding: 8px 20px;
+    border-radius: 5px;
+    margin-left: 15px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    animation: bounce 1s infinite;
+}
+
+.promo-banner .btn-light:hover {
+    background-color: var(--secondary-color);
+    color: white;
+    transform: translateY(-2px) scale(1.05);
+}
+
+/* Animation Keyframes */
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 5px rgba(26, 95, 180, 0.2);
+    }
+    100% {
+        box-shadow: 0 0 20px rgba(26, 95, 180, 0.6);
+    }
+}
+
+@keyframes slideDown {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.02);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes highlight {
+    0% {
+        color: var(--secondary-color);
+    }
+    50% {
+        color: white;
+    }
+    100% {
+        color: var(--secondary-color);
+    }
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-3px);
+    }
+}
+
+@keyframes backgroundShift {
+    0% {
+        background: linear-gradient(45deg, var(--primary-color), var(--tertiary-color));
+    }
+    50% {
+        background: linear-gradient(45deg, var(--tertiary-color), var(--primary-color));
+    }
+    100% {
+        background: linear-gradient(45deg, var(--primary-color), var(--tertiary-color));
+    }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .promo-banner {
+        padding: 12px 15px;
+    }
+    
+    .promo-banner p {
+        font-size: 16px;
+    }
+    
+    .promo-banner .btn-light {
+        display: block;
+        margin: 10px auto 0;
+        max-width: 200px;
+    }
+}
