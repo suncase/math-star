@@ -1,0 +1,29 @@
+{
+  "generated": "2025-07-30T06:37:07.000Z",
+  "files": [
+    {
+      "filename": "ActualClassMinimizedPhoto.jpeg",
+      "extension": "jpeg",
+      "size": 238033,
+      "modified": "2025-07-23T03:16:41.000Z",
+      "type": "image"
+    },
+    {
+      "filename": "IntersectVsIntercept.mp4",
+      "extension": "mp4",
+      "size": 8660731,
+      "modified": "2025-07-30T06:28:15.000Z",
+      "type": "video"
+    },
+    {
+      "filename": "VolumeOfCyclinder.mov",
+      "extension": "mov",
+      "size": 18482409,
+      "modified": "2025-07-28T00:32:07.000Z",
+      "type": "video"
+    }
+  ],
+  "totalFiles": 3,
+  "images": 1,
+  "videos": 2
+}
